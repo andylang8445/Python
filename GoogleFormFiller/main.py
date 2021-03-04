@@ -12,7 +12,7 @@ def checkin():
 
     browser = webdriver.Chrome(executable_path='/users/hongjunyun/chromedriver', options=option)
 
-    browser.get("")
+    browser.get("https://forms.gle/LLUCAY2GEoyAAL4m9")
 
     date = browser.find_elements_by_class_name("quantumWizTextinputPaperinputInput")
     radiobuttons = browser.find_elements_by_class_name("docssharedWizToggleLabeledLabelWrapper")
