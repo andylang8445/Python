@@ -3,6 +3,9 @@ from datetime import datetime
 import schedule
 import time
 
+def check():
+    print("Task Complete! At " + datetime.today().strftime('%Y-%m-%d %H:%M:%S'))
+
 def checkin():
     option = webdriver.ChromeOptions()
     option.add_argument("-incognito")
@@ -24,14 +27,14 @@ def checkin():
 
     submitbutton[0].click()
 
-    print("Task Complete!")
+    print("Task Complete! At "+datetime.today().strftime('%Y-%m-%d %H:%M:%S'))
 
-schedule.every().monday.at("10:01").do(checkin)
-schedule.every().tuesday.at("10:05").do(checkin)
-schedule.every().wednesday.at("10:03").do(checkin)
+schedule.every().monday.at("10:09").do(checkin)
+schedule.every().tuesday.at("10:03").do(checkin)
+schedule.every().wednesday.at("10:13").do(checkin)
 schedule.every().thursday.at("10:09").do(checkin)
 schedule.every().friday.at("09:55").do(checkin)
 
 while True:
     schedule.run_pending()
-    time.sleep(1)
+    time.sleep(27)
