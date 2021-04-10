@@ -32,7 +32,7 @@ def checkin():
 schedule.every().monday.at("10:09").do(checkin)
 schedule.every().tuesday.at("10:03").do(checkin)
 schedule.every().wednesday.at("10:13").do(checkin)
-schedule.every().thursday.at("10:09").do(checkin)
+schedule.every().thursday.at("09:49").do(checkin)
 schedule.every().friday.at("09:55").do(checkin)
 
 while True:
